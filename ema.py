@@ -16,11 +16,11 @@ sleeptimemax = input("Enter Sleep Time Max : ")
 sleeptimemin = input("Enter Sleep Time Min : ")
 max = input("Enter Range Max : ")
 min = input("Enter Range Min : ")
-max = int(max)
-min = int(min)
+end = int(max)
+start = int(min)
 
 # page
-for x in range(max,min):
+for x in range(start,end):
 
     url = "https://khatrimazaful.world/category/dual-audio-hindi-english-movies/page/" + str(x)
     response = requests.get(url)
@@ -67,8 +67,11 @@ for x in range(max,min):
 
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage?chat_id={CHANNEL_NAME}&text={MSG}&parse_mode=HTML&disable_notification=True"
 
-        requests.get(url)
+        if(mode=="n"):
+            requests.get(url)
 
-        ra = random.randint(int(sleeptimemax),int(sleeptimemin))
-        print(ra)
-        time.sleep(ra)
+        sleeptimemax = int(sleeptimemax)
+        sleeptimemin = int(sleeptimemin)
+        sleeptime = random.randint(sleeptimemin,sleeptimemax)
+        print(sleeptime)
+        time.sleep(sleeptime)
