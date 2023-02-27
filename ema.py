@@ -12,10 +12,10 @@ link2 = ""
 
 mode = input("Are you Testing : ")
 mode = str(mode)
-sleeptimemax = input("Enter Sleep Time Max : ")
 sleeptimemin = input("Enter Sleep Time Min : ")
-max = input("Enter Range Max : ")
-min = input("Enter Range Min : ")
+sleeptimemax = input("Enter Sleep Time Max : ")
+min = input("Enter Start : ")
+max = input("Enter End : ")
 end = int(max)
 start = int(min)
 
